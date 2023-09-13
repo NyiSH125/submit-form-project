@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Collector</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+
+<body>
+    <header>
+     <h1 id="title">Ivan's Survey Form</h1>
+     <p id="description"><em>How's your day? You got time to take this survey?</em></p>
+    </header>
+
+    <form id="survey-form">
+        <fieldset>
+            <label for="name" id="name-label" class="question">Name</label>
+            <input class="form-control" id="name" name="name" placeholder="Enter your Name" type="text" required/>
+        </fieldset>
+        <fieldset>
+            <label  for="email" id="email-label" class="question" >Email</label>
+            <input class="form-control" id="email" name="email" placeholder="Enter your Email" type="email" required/>
+        </fieldset>
+        <fieldset>
+            <label for="number" id="number-label" class="question">Age (optional)</label>
+            <input class="form-control" id="number" name="age" placeholder="Age" type="number" min="5" max="140"/>
+        </fieldset>
+        <fieldset>
+            <label for="dropdown" class="question">What's your current role? </label>
+            <select class="form-control" id="dropdown" > 
+                <option value=" ">
+                    (select one)
+                </option>
+                <option value="1">
+                    Full time Job
+                </option>
+                <option value="2">
+                    Student
+                </option>
+                <option value="3">
+                    Prefer not to say
+                </option>
+                <option value="4">
+                    Other
+                </option>
+            </select> 
+        </fieldset>
+        <fieldset>
+            <div class="question">Do you think Cats are cool?</div>
+            <label>
+                <input type="radio" value="1" name="yes" class="inline"/>Absolutely
+            </label>
+            <label>
+                <input type="radio" value="2" name="no" class="inline"/>Not so cool
+            </label>
+            <label>
+                <input type="radio" value="3" name="nah" class="inline"/>Dogs are superior
+            </label>            
+        </fieldset>
+        <fieldset>
+            <div class="question">What's your favourite ice-cream flavor? (check all that apply)</div>
+            <label>
+                <input type="checkbox" value="1"/>Strawberry
+            </label>
+            <label>
+                <input type="checkbox" value="2"/>Chocolate
+            </label>
+            <label>
+                <input type="checkbox" value="3"/>Milk
+            </label>
+            <label>
+                <input type="checkbox" value="4"/>Vanilla
+            </label>
+            <label>
+                <input type="checkbox" value="5"/>Other
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="form-review" class="question">Any comments or suggestions for the form?</label>
+            <textarea class="form-control" id="form-review" rows="4" placeholder="Leave your suggestion..."></textarea>
+        </fieldset>
+        <fieldset>
+            <button id="submit" type="submit" name="submit">Submit</button>
+        </fieldset>
+        
+    </form>
+</body>
+</html>
